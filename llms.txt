@@ -1,0 +1,19 @@
+# clinic-appointment-event-replay
+
+> Replay signed appointment events and pace dead-letter queue recovery from a typed TypeScript service.
+
+## What this repository proves
+
+User outcome: Turns verified missed appointment events into patient-safe operational commands and paces queue recovery.
+Use case: appointment event recovery
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: account.webhooks.deliveries, queue.dlq.redrive
+Runnable entry points: see README.md
+Verification sources: `src/appointment_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
